@@ -96,14 +96,43 @@ export default function AboutPage() {
           className="px-8 py-20 md:py-28 max-w-7xl mx-auto border-b border-black/10"
         >
           <span className="font-bold tracking-[0.3em] uppercase text-xs mb-6 inline-block border border-black px-4 py-2">
-            The Band
+            Our Mission & Calling
           </span>
-          <h1 className="font-display text-[7rem] md:text-[11rem] leading-[0.85] uppercase mb-10">
+          <h1 className="font-display text-[7rem] md:text-[11rem] leading-[0.85] uppercase mb-12">
             About <br /> The Band.
           </h1>
-          <p className="text-xl md:text-3xl font-medium text-black/80 max-w-3xl leading-snug">
-            We are <strong>The Fishermen</strong>. Rooted in faith and driven by a passion for authentic rock, we create music designed to uplift, inspire, and point people toward hope.
-          </p>
+
+          <div className="space-y-8 text-lg md:text-2xl font-normal text-black/80 leading-relaxed max-w-5xl">
+            <p className="text-2xl md:text-3xl font-medium text-black leading-snug">
+              What brought <strong>The Fishermen</strong> together was the Love of God, the Word of God, and the sheer joy of enjoying one of His greatest gifts to mankind—music.
+            </p>
+
+            <p>
+              From diverse backgrounds, eclectic musical influences, varied writing styles, and versatile playing skills over the years, The Fishermen has grown to become a true brotherhood of musicians. We bring our God-given gifts together—sharpening, encouraging, and building one another up in faith and craft.
+            </p>
+
+            <p>
+              Amidst the fun, the privilege, and the joy of making a joyful noise, we hold fast to this truth: <strong>only the Word of God has the power to transform hearts, renew minds, and save lives</strong>. Music on its own cannot lead people to God. That work is solely accomplished by the Word of God and the Holy Spirit drawing hearts to Jesus Christ.
+            </p>
+
+            <p>
+              As a band, our goal is to write and play songs celebrating God’s Love, His Faithfulness, His Power, His Forgiveness, His Greatness, His Mercies, and His Unshakeable Promises—pointing every listener to the truth and glory revealed in His Word. Through our voices, our instruments, and our daily lives, our prayer is that everything we do points people directly to Jesus. The Fishermen provides us with a platform to share what God has done in our lives, serving as an additional source of blessing, encouragement, and living hope.
+            </p>
+
+            <p>
+              We strive to pursue musicianship with excellence—to bless, inspire, and engage everyone who has a heart for God and an ear for authentic rock. Our conviction is that when we offer Him the very best of our gifts, He takes what is ordinary and makes it extraordinary.
+            </p>
+
+            <div className="pt-8 border-t border-black/10">
+              <blockquote className="italic text-xl md:text-2xl text-black/90 font-serif mb-4">
+                “Follow me, and I will make you fishers of men.”
+                <span className="block text-sm not-italic font-bold font-sans uppercase tracking-widest text-black/50 mt-2">— Matthew 4:19</span>
+              </blockquote>
+              <p className="font-display text-3xl md:text-4xl text-black tracking-wide uppercase pt-2">
+                Casting Sounds and Captivating Souls for His Glory.
+              </p>
+            </div>
+          </div>
         </motion.section>
 
         {/* Band Full Photo */}
