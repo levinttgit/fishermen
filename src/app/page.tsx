@@ -25,9 +25,9 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-[#F9F9F9] text-[#111111] font-sans selection:bg-black selection:text-white">
-      {/* Navigation (Editorial & Sharp) */}
+      {/* Navigation */}
       <nav className="flex flex-col md:flex-row justify-between items-center px-8 py-10 w-full border-b border-black/10">
-        <div className="text-3xl md:text-4xl font-black tracking-tighter uppercase mb-6 md:mb-0">
+        <div className="font-display text-4xl md:text-5xl mb-6 md:mb-0">
           The Fishermen.
         </div>
         <div className="flex gap-8 font-bold text-xs uppercase tracking-widest text-[#111111]">
@@ -39,7 +39,7 @@ export default function Home() {
 
       <main className="w-full">
         
-        {/* Hero Section (Bold, High Impact) */}
+        {/* Hero Section */}
         <motion.section 
           initial="hidden"
           animate="visible"
@@ -49,7 +49,7 @@ export default function Home() {
           <span className="font-bold tracking-[0.3em] uppercase text-xs mb-8 block border border-black px-4 py-2">
             New Music Video
           </span>
-          <h1 className="text-7xl md:text-[10rem] font-black tracking-tighter uppercase leading-[0.85] mb-12">
+          <h1 className="font-display text-[8rem] md:text-[14rem] leading-[0.85] mb-12">
             Hope <br/> Through <br/> Harmony.
           </h1>
           <p className="text-lg md:text-2xl font-medium text-black/60 max-w-2xl mx-auto mb-16 leading-relaxed">
@@ -68,7 +68,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* Listen Now / Video Section (Full bleed feel) */}
+        {/* Listen Now / Video Section */}
         <motion.section 
           id="listen"
           initial="hidden"
@@ -79,7 +79,7 @@ export default function Home() {
         >
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
-              <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none">
+              <h2 className="font-display text-[6rem] md:text-[9rem] leading-none">
                 Listen <br/> Now
               </h2>
               <p className="max-w-sm text-white/60 font-medium">
@@ -101,7 +101,7 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* About Us Section (Magazine / Editorial Layout) */}
+        {/* About Us Section */}
         <motion.section 
           id="about"
           initial="hidden"
@@ -111,7 +111,7 @@ export default function Home() {
           className="py-32 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-32"
         >
           <div className="md:w-1/3">
-            <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter leading-none mb-8">
+            <h2 className="font-display text-[6rem] md:text-[8rem] leading-none mb-8">
               About <br/> Us.
             </h2>
           </div>
@@ -132,7 +132,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-[#111111] text-white py-16 px-8 text-center flex flex-col items-center justify-center">
-        <div className="text-4xl font-black uppercase tracking-tighter mb-8">The Fishermen.</div>
+        <div className="font-display text-6xl mb-8">The Fishermen.</div>
         <div className="text-xs font-bold uppercase tracking-widest text-white/40">
           <p>© 2026 The Fishermen Music. All rights reserved.</p>
         </div>
@@ -140,3 +140,4 @@ export default function Home() {
     </div>
   );
 }
+
