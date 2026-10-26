@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 
 const InstagramIcon = () => (
@@ -27,12 +28,12 @@ export default function Home() {
     <div className="min-h-screen bg-[#F9F9F9] text-[#111111] font-sans selection:bg-black selection:text-white">
       {/* Navigation */}
       <nav className="flex flex-col md:flex-row justify-between items-center px-8 py-10 w-full border-b border-black/10">
-        <div className="font-display text-4xl md:text-5xl mb-6 md:mb-0">
+        <Link href="/" className="font-display text-4xl md:text-5xl mb-6 md:mb-0">
           The Fishermen.
-        </div>
+        </Link>
         <div className="flex gap-8 font-bold text-xs uppercase tracking-widest text-[#111111]">
           <a href="#listen" className="hover:opacity-60 transition">Listen</a>
-          <a href="#about" className="hover:opacity-60 transition">About</a>
+          <Link href="/about" className="hover:opacity-60 transition">About</Link>
           <a href="https://www.instagram.com/thefishermen.music/" target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition">Instagram</a>
         </div>
       </nav>
@@ -61,10 +62,9 @@ export default function Home() {
               <PlayIcon />
               Watch Video
             </a>
-            <a href="https://www.instagram.com/thefishermen.music/" target="_blank" rel="noopener noreferrer" className="flex items-center justify-center gap-3 bg-transparent border-2 border-[#111111] text-[#111111] px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-[#111111] hover:text-white transition">
-              <InstagramIcon />
-              Instagram
-            </a>
+            <Link href="/about" className="flex items-center justify-center gap-3 bg-transparent border-2 border-[#111111] text-[#111111] px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-[#111111] hover:text-white transition">
+              About The Band
+            </Link>
           </div>
         </motion.section>
 
@@ -101,14 +101,13 @@ export default function Home() {
           </div>
         </motion.section>
 
-        {/* About Us Section */}
+        {/* About Preview Section linking to full /about */}
         <motion.section 
-          id="about"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeUp}
-          className="py-32 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-32"
+          className="py-32 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-32 items-start"
         >
           <div className="md:w-1/3">
             <h2 className="font-display text-[6rem] md:text-[8rem] leading-none mb-8">
@@ -120,9 +119,14 @@ export default function Home() {
             <p>
               We are <strong>The Fishermen</strong>. Rooted in faith and driven by a passion for authentic rock, we create music designed to uplift, inspire, and point people toward hope.
             </p>
-            <p className="text-sm font-bold uppercase tracking-widest text-black/50 border-t border-black/10 pt-10">
-              Sharing the light through every chord and lyric.
-            </p>
+            <div>
+              <Link 
+                href="/about" 
+                className="inline-flex items-center gap-4 bg-[#111111] text-white px-8 py-4 font-bold uppercase tracking-widest text-sm hover:bg-black/80 transition"
+              >
+                Meet The Band Members →
+              </Link>
+            </div>
           </div>
         </motion.section>
       </main>
@@ -137,4 +141,3 @@ export default function Home() {
     </div>
   );
 }
-
