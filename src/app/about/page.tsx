@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
+import { socialLinks } from "../socialLinks";
 
 interface Member {
   name: string;
@@ -79,18 +80,32 @@ export default function AboutPage() {
         <Link href="/" className="font-display text-4xl md:text-5xl tracking-tight mb-4 md:mb-0 hover:opacity-75 transition">
           The Fishermen.
         </Link>
-        <div className="flex items-center gap-8 font-bold text-xs uppercase tracking-[0.2em] text-[#111111]">
-          <Link href="/" className="hover:opacity-50 transition">Home</Link>
-          <Link href="/#listen" className="hover:opacity-50 transition">Listen</Link>
-          <Link href="/about" className="border-b-2 border-black pb-1 hover:opacity-50 transition">About</Link>
-          <a
-            href="https://www.instagram.com/thefishermen.music/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:opacity-50 transition flex items-center gap-1.5"
-          >
-            Instagram ↗
-          </a>
+        <div className="flex items-center gap-6 md:gap-8">
+          <div className="flex items-center gap-6 md:gap-8 font-bold text-xs uppercase tracking-[0.2em] text-[#111111]">
+            <Link href="/" className="hover:opacity-50 transition">Home</Link>
+            <Link href="/#listen" className="hover:opacity-50 transition">Listen</Link>
+            <Link href="/about" className="border-b-2 border-black pb-1 hover:opacity-50 transition">About</Link>
+          </div>
+
+          {/* Social Icons Bar in Header */}
+          <div className="hidden sm:flex items-center gap-3 pl-6 border-l border-black/15">
+            {socialLinks.map((item) => {
+              const Icon = item.icon;
+              return (
+                <a
+                  key={item.name}
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.name}
+                  title={item.name}
+                  className="p-2 border border-black/15 hover:border-black hover:bg-black hover:text-white transition duration-200"
+                >
+                  <Icon />
+                </a>
+              );
+            })}
+          </div>
         </div>
       </nav>
 
@@ -253,9 +268,24 @@ export default function AboutPage() {
       {/* Footer */}
       <footer className="bg-[#111111] text-white py-16 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
         <div className="font-display text-6xl mb-4">The Fishermen.</div>
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/40 mb-2">
+        <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/40 mb-8">
           Casting Sounds and Captivating Souls for His Glory
         </p>
+
+        {/* Footer Social & Streaming Links */}
+        <div className="flex flex-wrap justify-center gap-6 mb-10 text-xs font-bold uppercase tracking-widest text-white/70">
+          {socialLinks.map((item) => (
+            <a
+              key={item.name}
+              href={item.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white hover:underline underline-offset-4 transition"
+            >
+              {item.name} ↗
+            </a>
+          ))}
+        </div>
         <p className="text-[11px] uppercase tracking-widest text-white/30">
           © 2026 The Fishermen Music. All rights reserved.
         </p>
