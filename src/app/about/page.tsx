@@ -93,9 +93,8 @@ export default function AboutPage() {
           variants={fadeUp}
           className="px-8 py-20 max-w-7xl mx-auto"
         >
-          <div className="mb-6 flex justify-between items-end">
-            <h2 className="font-display text-4xl md:text-5xl uppercase">The Fishermen — Full Band</h2>
-            <span className="text-xs font-bold uppercase tracking-widest text-black/40">Band Portrait</span>
+          <div className="mb-6 flex justify-center">
+            <h2 className="font-display text-4xl md:text-5xl uppercase">The Fishermen</h2>
           </div>
           
           <div className="w-full flex justify-center">
@@ -168,7 +167,6 @@ export default function AboutPage() {
 
                   {/* Member Details */}
                   <div className="w-full md:w-1/2 flex flex-col justify-center">
-                    <span className="text-xs font-bold uppercase tracking-[0.25em] text-white/50 mb-3">0{idx + 1}</span>
                     <h3 className="font-display text-5xl md:text-7xl uppercase leading-none mb-3">
                       {member.name}
                     </h3>
