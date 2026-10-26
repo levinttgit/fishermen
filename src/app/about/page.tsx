@@ -25,25 +25,41 @@ const members: Member[] = [
   {
     name: "Ramesh Jayakrishnan",
     role: "Lead Guitar",
-    bio: "Crafting signature melodic guitar lines and searing rock solos that drive the band's anthemic rock identity.",
+    bio: [
+      "Like all my fellow bandmates, it is nothing but His grace that has brought my family and me from where we were to where we are, and gives us the assurance of where we are going.",
+      "Born into a non-Christian family, I grew up in a loving home with all the usual experiences of family life. It was during my days at business school that I first met a dear friend in whose life I saw a peace that truly surpassed all understanding. It was through him that I eventually came to know Jesus Christ. Looking back, I cannot imagine what life would be like outside of living by His grace, strength, and resources.",
+      "My love for music began early as my parents introduced me to the guitar. I am deeply grateful to God and to them for instilling that passion. Over the years, I have been inspired by musicians like Mark Knopfler, Allan Holdsworth, John McLaughlin, Keith Green, Neal Morse, and many others, shaping my lifelong journey with the instrument."
+    ],
     image: "/fishermen/images/ramesh.jpg",
   },
   {
     name: "Denver Martin",
     role: "Vocals / Keyboard",
-    bio: "Adding lush harmonic depth, keyboard textures, and complementary vocal harmonies to elevate every performance.",
+    bio: [
+      "God is LOVE. I would not be who I am today if it were not for the love of God. At the age of five, I was miraculously healed from a condition I had suffered with for three years. Through that trial, my parents came to truly know and believe in Jesus. Witnessing them actively live out their faith by seeking God and praying over me daily marked the beginning of my own faith journey. In grade 9, I made a public decision to give my life to Jesus, and around that time I developed a desire to play the piano—not knowing then how God would use this gift to bless me and bring Him glory.",
+      "About a decade later, I was once again miraculously healed from another painful condition. Yet, like the Israelites, after experiencing God’s miracles, I have often wandered in my own way. But the Lord, in His abundant mercy, has always brought me back to Him. It was this divine plan that led me to The Fishermen—a true band of brothers who not only share a passion for playing music for Jesus, but a sincere commitment to follow Him.",
+      "God has blessed me with a wonderful wife, Annie, and our two daughters in Hamilton, Canada. Colossians 3:16 says: “Let the word of Christ dwell in you richly in all wisdom, teaching and admonishing one another in psalms and hymns and spiritual songs, singing with grace in your hearts to the Lord.” It is my continued desire to share the transformative love of Jesus through our music, songs, and lives."
+    ],
     image: "/fishermen/images/denver.jpg",
   },
   {
     name: "Levin Thomas",
     role: "Bass",
-    bio: "Locking down the low end with dynamic bass grooves, cementing the rhythm section with drive and precision.",
+    bio: [
+      "At a very young age, I was deeply captivated by music. I remember sitting on the front bench at church, watching the musicians on our worship team with awe and admiration. Back then, I didn’t know a single chord or note—only pure curiosity and wonder.",
+      "Today, I thank God for blessing me with the gift of music. My heart’s desire is to honor Him in unity with my brothers and to help lead people into His presence through worship.",
+      "I have truly tasted and seen the goodness of God in my life and in the life of my family, and for that, I am forever grateful. He has been my source and my strength, and I long to testify of His goodness in every part of my life."
+    ],
     image: "/fishermen/images/levin.jpg",
   },
   {
     name: "Jake Jacob",
     role: "Drums",
-    bio: "Powering the pulse of each track with heavy rock rhythms and energetic percussion.",
+    bio: [
+      "God is good. These three words encapsulate my life’s testimony. There have been many seasons where trials felt overwhelming—times of uncertainty, pain, and even silence. But through every valley, Jesus never left my side. Even when I couldn’t see a way forward, He was working behind the scenes, shaping my heart and strengthening my faith.",
+      "In moments when I felt weakest, He proved Himself strong. When doors closed, He opened new ones in unexpected ways. When I was seeking direction and purpose, God clearly answered my prayers by leading me to The Fishermen. It was an unmistakable answer to prayer—giving me a place to grow, to serve, and to be surrounded by brothers who share a genuine heart for worship and ministry.",
+      "He used my struggles to teach me not to lean on my own understanding, but to trust in His perfect plan. Looking back, I can see how every hardship built something deeper: character, patience, and an unshakable hope. Today, I am blessed with an amazing wife and our three boys. He has been my peace, my strength, and my provider. I stand here only because of His faithfulness—all glory to Jesus!"
+    ],
     image: "/fishermen/images/jake.jpg",
   },
 ];
