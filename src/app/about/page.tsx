@@ -88,87 +88,82 @@ export default function AboutPage() {
       </nav>
 
       <main className="w-full">
-        {/* About Header Section */}
+        {/* About Header & Full Band Section (Side-by-Side) */}
         <motion.section
           initial="hidden"
           animate="visible"
           variants={fadeUp}
           className="px-8 py-20 md:py-28 max-w-7xl mx-auto border-b border-black/10"
         >
-          <span className="font-bold tracking-[0.3em] uppercase text-xs mb-6 inline-block border border-black px-4 py-2">
-            Our Mission & Calling
-          </span>
-          <h1 className="font-display text-[7rem] md:text-[11rem] leading-[0.85] uppercase mb-12">
-            About <br /> The Band.
-          </h1>
+          <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
+            {/* Band Photo (4x4 Square) */}
+            <div className="w-full lg:w-1/2 flex flex-col items-center">
+              <div className="w-full max-w-lg aspect-square bg-neutral-200 border border-black/10 relative overflow-hidden group shadow-lg">
+                <img
+                  src={bandPhotoUrl}
+                  alt="The Fishermen Band"
+                  className="w-full h-full object-cover object-center"
+                  onError={(e) => {
+                    e.currentTarget.style.display = "none";
+                    const fallback = e.currentTarget.parentElement?.querySelector(".fallback-placeholder") as HTMLElement;
+                    if (fallback) fallback.style.display = "flex";
+                  }}
+                />
+                <div className="fallback-placeholder hidden absolute inset-0 w-full h-full border-2 border-dashed border-black/30 flex-col items-center justify-center text-center p-8">
+                  <svg className="w-16 h-16 text-black/30 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                  </svg>
+                  <p className="font-display text-2xl md:text-3xl uppercase tracking-wider text-black/60">Band Picture: band.jpg</p>
+                  <p className="text-xs uppercase tracking-widest text-black/40 mt-1">Place file in: public/images/band.jpg</p>
+                </div>
+              </div>
+              <h2 className="font-display text-3xl md:text-4xl uppercase tracking-wider text-black/80 mt-4">
+                The Fishermen
+              </h2>
+            </div>
 
-          <div className="space-y-8 text-lg md:text-2xl font-normal text-black/80 leading-relaxed max-w-5xl">
-            <p className="text-2xl md:text-3xl font-medium text-black leading-snug">
-              What brought <strong>The Fishermen</strong> together was the Love of God, the Word of God, and the sheer joy of enjoying one of His greatest gifts to mankind—music.
-            </p>
+            {/* About Text */}
+            <div className="w-full lg:w-1/2 flex flex-col justify-center">
+              <span className="font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block border border-black px-4 py-2 self-start">
+                Our Mission & Calling
+              </span>
+              <h1 className="font-display text-6xl md:text-8xl leading-none uppercase mb-8">
+                About The Band
+              </h1>
 
-            <p>
-              From diverse backgrounds, eclectic musical influences, varied writing styles, and versatile playing skills over the years, The Fishermen has grown to become a true brotherhood of musicians. We bring our God-given gifts together—sharpening, encouraging, and building one another up in faith and craft.
-            </p>
+              <div className="space-y-6 text-base md:text-lg font-normal text-black/80 leading-relaxed">
+                <p className="text-xl md:text-2xl font-medium text-black leading-snug">
+                  What brought <strong>The Fishermen</strong> together was the Love of God, the Word of God, and the sheer joy of enjoying one of His greatest gifts to mankind—music.
+                </p>
 
-            <p>
-              Amidst the fun, the privilege, and the joy of making a joyful noise, we hold fast to this truth: <strong>only the Word of God has the power to transform hearts, renew minds, and save lives</strong>. Music on its own cannot lead people to God. That work is solely accomplished by the Word of God and the Holy Spirit drawing hearts to Jesus Christ.
-            </p>
+                <p>
+                  From diverse backgrounds, eclectic musical influences, varied writing styles, and versatile playing skills over the years, The Fishermen has grown to become a true brotherhood of musicians. We bring our God-given gifts together—sharpening, encouraging, and building one another up in faith and craft.
+                </p>
 
-            <p>
-              As a band, our goal is to write and play songs celebrating God’s Love, His Faithfulness, His Power, His Forgiveness, His Greatness, His Mercies, and His Unshakeable Promises—pointing every listener to the truth and glory revealed in His Word. Through our voices, our instruments, and our daily lives, our prayer is that everything we do points people directly to Jesus. The Fishermen provides us with a platform to share what God has done in our lives, serving as an additional source of blessing, encouragement, and living hope.
-            </p>
+                <p>
+                  Amidst the fun, the privilege, and the joy of making a joyful noise, we hold fast to this truth: <strong>only the Word of God has the power to transform hearts, renew minds, and save lives</strong>. Music on its own cannot lead people to God. That work is solely accomplished by the Word of God and the Holy Spirit drawing hearts to Jesus Christ.
+                </p>
 
-            <p>
-              We strive to pursue musicianship with excellence—to bless, inspire, and engage everyone who has a heart for God and an ear for authentic rock. Our conviction is that when we offer Him the very best of our gifts, He takes what is ordinary and makes it extraordinary.
-            </p>
+                <p>
+                  As a band, our goal is to write and play songs celebrating God’s Love, His Faithfulness, His Power, His Forgiveness, His Greatness, His Mercies, and His Unshakeable Promises—pointing every listener to the truth and glory revealed in His Word. Through our voices, our instruments, and our daily lives, our prayer is that everything we do points people directly to Jesus.
+                </p>
 
-            <div className="pt-8 border-t border-black/10">
-              <blockquote className="italic text-xl md:text-2xl text-black/90 font-serif mb-4">
-                “Follow me, and I will make you fishers of men.”
-                <span className="block text-sm not-italic font-bold font-sans uppercase tracking-widest text-black/50 mt-2">— Matthew 4:19</span>
-              </blockquote>
-              <p className="font-display text-3xl md:text-4xl text-black tracking-wide uppercase pt-2">
-                Casting Sounds and Captivating Souls for His Glory.
-              </p>
+                <p>
+                  We strive to pursue musicianship with excellence—to bless, inspire, and engage everyone who has a heart for God and an ear for authentic rock. Our conviction is that when we offer Him the very best of our gifts, He takes what is ordinary and makes it extraordinary.
+                </p>
+
+                <div className="pt-6 border-t border-black/10">
+                  <blockquote className="italic text-lg md:text-xl text-black/90 font-serif mb-3">
+                    “Follow me, and I will make you fishers of men.”
+                    <span className="block text-xs not-italic font-bold font-sans uppercase tracking-widest text-black/50 mt-1">— Matthew 4:19</span>
+                  </blockquote>
+                  <p className="font-display text-2xl md:text-3xl text-black tracking-wide uppercase pt-1">
+                    Casting Sounds and Captivating Souls for His Glory.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
-        </motion.section>
-
-        {/* Band Full Photo */}
-        <motion.section
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
-          variants={fadeUp}
-          className="px-8 py-20 max-w-7xl mx-auto"
-        >
-          <div className="mb-6 flex justify-center">
-            <h2 className="font-display text-4xl md:text-5xl uppercase">The Fishermen</h2>
-          </div>
-          
-          <div className="w-full flex justify-center">
-            <div className="w-full max-w-2xl aspect-square bg-neutral-200 border border-black/10 relative overflow-hidden group shadow-lg">
-              <img
-                src={bandPhotoUrl}
-                alt="The Fishermen Band"
-                className="w-full h-full object-cover object-center"
-                onError={(e) => {
-                  // Show placeholder if image not yet placed in folder
-                  e.currentTarget.style.display = "none";
-                  const fallback = e.currentTarget.parentElement?.querySelector(".fallback-placeholder") as HTMLElement;
-                  if (fallback) fallback.style.display = "flex";
-                }}
-              />
-              <div className="fallback-placeholder hidden absolute inset-0 w-full h-full border-2 border-dashed border-black/30 flex-col items-center justify-center text-center p-8">
-                <svg className="w-16 h-16 text-black/30 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-              </svg>
-              <p className="font-display text-2xl md:text-3xl uppercase tracking-wider text-black/60">Band Picture: band.jpg</p>
-              <p className="text-xs uppercase tracking-widest text-black/40 mt-1">Place file in: public/images/band.jpg</p>
-            </div>
-          </div>
-        </div>
         </motion.section>
 
         {/* Band Members Section */}
