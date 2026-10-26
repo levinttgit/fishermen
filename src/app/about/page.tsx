@@ -98,26 +98,28 @@ export default function AboutPage() {
             <span className="text-xs font-bold uppercase tracking-widest text-black/40">Band Portrait</span>
           </div>
           
-          <div className="w-full aspect-video bg-neutral-200 border border-black/10 relative overflow-hidden group">
-            <img
-              src={bandPhotoUrl}
-              alt="The Fishermen Band"
-              className="w-full h-full object-cover object-center"
-              onError={(e) => {
-                // Show placeholder if image not yet placed in folder
-                e.currentTarget.style.display = "none";
-                const fallback = e.currentTarget.parentElement?.querySelector(".fallback-placeholder") as HTMLElement;
-                if (fallback) fallback.style.display = "flex";
-              }}
-            />
-            <div className="fallback-placeholder hidden absolute inset-0 w-full h-full border-2 border-dashed border-black/30 flex-col items-center justify-center text-center p-8">
-              <svg className="w-16 h-16 text-black/30 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+          <div className="w-full flex justify-center">
+            <div className="w-full max-w-2xl aspect-square bg-neutral-200 border border-black/10 relative overflow-hidden group shadow-lg">
+              <img
+                src={bandPhotoUrl}
+                alt="The Fishermen Band"
+                className="w-full h-full object-cover object-center"
+                onError={(e) => {
+                  // Show placeholder if image not yet placed in folder
+                  e.currentTarget.style.display = "none";
+                  const fallback = e.currentTarget.parentElement?.querySelector(".fallback-placeholder") as HTMLElement;
+                  if (fallback) fallback.style.display = "flex";
+                }}
+              />
+              <div className="fallback-placeholder hidden absolute inset-0 w-full h-full border-2 border-dashed border-black/30 flex-col items-center justify-center text-center p-8">
+                <svg className="w-16 h-16 text-black/30 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2 2v12a2 2 0 002 2z" />
               </svg>
               <p className="font-display text-2xl md:text-3xl uppercase tracking-wider text-black/60">Band Picture: band.jpg</p>
               <p className="text-xs uppercase tracking-widest text-black/40 mt-1">Place file in: public/images/band.jpg</p>
             </div>
           </div>
+        </div>
         </motion.section>
 
         {/* Band Members Section */}
