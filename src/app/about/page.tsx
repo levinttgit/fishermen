@@ -126,13 +126,10 @@ export default function AboutPage() {
                 </div>
               </div>
               
-              <div className="w-full flex justify-between items-baseline mt-4 px-1">
+              <div className="w-full flex justify-center mt-4">
                 <h2 className="font-display text-3xl md:text-4xl uppercase tracking-wider text-black">
                   The Fishermen
                 </h2>
-                <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-black/40">
-                  Brotherhood & Worship
-                </span>
               </div>
             </div>
 
