@@ -138,9 +138,6 @@ export default function AboutPage() {
 
             {/* About Text */}
             <div className="w-full lg:w-7/12 flex flex-col justify-center">
-              <span className="font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block border border-black px-4 py-1.5 self-start">
-                Our Calling & Mission
-              </span>
               <h1 className="font-display text-6xl md:text-8xl leading-none uppercase mb-8">
                 About The Band
               </h1>
@@ -187,16 +184,11 @@ export default function AboutPage() {
         <section className="bg-[#111111] text-white py-24 md:py-32 px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
             {/* Lineup Header */}
-            <div className="mb-20 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-white/10 pb-10">
-              <div>
-                <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-3 block">Lineup</span>
-                <h2 className="font-display text-6xl md:text-8xl uppercase leading-none">
-                  Meet The Members
-                </h2>
-              </div>
-              <p className="max-w-md text-sm md:text-base text-white/60 leading-relaxed">
-                Five brothers united by Christ, sharing their personal testimonies and passion for authentic rock worship.
-              </p>
+            <div className="mb-20 md:mb-24 border-b border-white/10 pb-10">
+              <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-3 block">Lineup</span>
+              <h2 className="font-display text-6xl md:text-8xl uppercase leading-none">
+                Meet The Members
+              </h2>
             </div>
 
             {/* Alternating Member Cards */}
