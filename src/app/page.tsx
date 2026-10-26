@@ -120,9 +120,6 @@ export default function Home() {
             <p>
               We are <strong>The Fishermen</strong>. Rooted in faith and driven by a passion for authentic rock, we create music designed to uplift, inspire, and point people toward hope.
             </p>
-            <p>
-              Drawing inspiration from legendary Christian rock pioneers like Petra and the modern, soul-stirring melodies of MercyMe, our sound bridges the gap between powerful stadium anthems and intimate moments of worship.
-            </p>
             <p className="text-sm font-bold uppercase tracking-widest text-black/50 border-t border-black/10 pt-10">
               Sharing the light through every chord and lyric.
             </p>
