@@ -98,7 +98,7 @@ export default function AboutPage() {
             <span className="text-xs font-bold uppercase tracking-widest text-black/40">Band Portrait</span>
           </div>
           
-          <div className="w-full aspect-[21/9] bg-neutral-200 border border-black/10 relative overflow-hidden group">
+          <div className="w-full aspect-video bg-neutral-200 border border-black/10 relative overflow-hidden group">
             <img
               src={bandPhotoUrl}
               alt="The Fishermen Band"
