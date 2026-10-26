@@ -200,7 +200,7 @@ export default function AboutPage() {
                   whileInView="visible"
                   viewport={{ once: true, margin: "-80px" }}
                   variants={fadeUp}
-                  className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start gap-12 lg:gap-16 border-b border-white/10 pb-20 md:pb-28`}
+                  className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start gap-12 lg:gap-16 ${idx !== members.length - 1 ? 'border-b border-white/10 pb-20 md:pb-28' : 'pb-8'}`}
                 >
                   {/* Photo (4x4 Square) */}
                   <div className="w-full lg:w-5/12 flex justify-center">
@@ -258,7 +258,7 @@ export default function AboutPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#111111] text-white py-16 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
+      <footer className="bg-[#111111] text-white py-16 px-8 text-center flex flex-col items-center justify-center">
         <div className="font-display text-6xl mb-4">The Fishermen.</div>
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/40 mb-2">
           Casting Sounds and Captivating Souls for His Glory
