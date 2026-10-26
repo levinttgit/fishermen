@@ -6,7 +6,7 @@ import { motion, type Variants } from "framer-motion";
 interface Member {
   name: string;
   role: string;
-  bio: string;
+  bio: string | string[];
   image?: string;
 }
 
@@ -14,7 +14,12 @@ const members: Member[] = [
   {
     name: "Kurien (Biju) Kurien",
     role: "Vocals / Rhythm Guitar",
-    bio: "Founding member delivering impassioned lead vocals and solid rhythm guitar riffs, anchoring the heartbeat and energy of the band.",
+    bio: [
+      "My story is really one of God’s mercy. Jesus alone saved me from the depths of despair and set my feet upon solid ground. Through every trial, He taught me the futility of relying on myself and the absolute grace of depending on Him totally. Words will never be enough to capture all that He means to me and all that He has done in my life.",
+      "My deepest desire now is to praise Him to the highest. I am constantly inspired by Scripture—Psalm 33:3 says: “Sing to Him a new song; play skillfully, and shout for joy.” While writing songs and growing in musicianship is a lifelong pursuit, I am deeply grateful for all God has enabled us to do thus far.",
+      "Our band, The Fishermen, was born out of God’s leading, bringing each member together in His perfect timing. Our practices are so much more than rehearsals—they overflow into times of prayer and fellowship in God’s Word. Through one of my hardest seasons, God used this brotherhood week after week to strengthen me and my family.",
+      "God has blessed me with a wonderful wife, Annie, and three boys in Mississauga, Canada. I believe the greatest gift we can offer the world isn’t merely motivation or material comfort, but the living hope found in Jesus Christ. With my brothers in the Lord, I want to offer the best I have—because the best is Him!"
+    ],
     image: "/fishermen/images/kurien.jpg",
   },
   {
@@ -173,10 +178,16 @@ export default function AboutPage() {
                     <p className="text-sm font-bold uppercase tracking-widest text-white/70 mb-6 border-b border-white/10 pb-4">
                       {member.role}
                     </p>
-                    <p className="text-lg md:text-xl text-white/80 font-medium leading-relaxed mb-6">
-                      {member.bio}
-                    </p>
-                    <div className="text-xs text-white/40 uppercase tracking-widest">
+                    <div className="space-y-4 mb-8 text-base md:text-lg text-white/80 font-normal leading-relaxed">
+                      {Array.isArray(member.bio) ? (
+                        member.bio.map((paragraph, pIdx) => (
+                          <p key={pIdx}>{paragraph}</p>
+                        ))
+                      ) : (
+                        <p>{member.bio}</p>
+                      )}
+                    </div>
+                    <div className="text-xs text-white/40 uppercase tracking-widest pt-2 border-t border-white/10">
                       The Fishermen • {member.role.split('/')[0].trim()}
                     </div>
                   </div>
