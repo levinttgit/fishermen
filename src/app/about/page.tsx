@@ -144,10 +144,6 @@ export default function AboutPage() {
 
               <div className="space-y-6 text-base md:text-lg font-normal text-black/80 leading-relaxed">
                 <p className="text-xl md:text-2xl font-medium text-black leading-snug">
-                  What brought <strong>The Fishermen</strong> together was the Love of God, the Word of God, and the sheer joy of enjoying one of His greatest gifts to mankind—music.
-                </p>
-
-                <p>
                   From diverse backgrounds, eclectic musical influences, varied writing styles, and versatile playing skills over the years, The Fishermen has grown to become a true brotherhood of musicians. We bring our God-given gifts together—sharpening, encouraging, and building one another up in faith and craft.
                 </p>
 
@@ -258,7 +254,7 @@ export default function AboutPage() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#111111] text-white py-16 px-8 text-center flex flex-col items-center justify-center">
+      <footer className="bg-[#111111] text-white py-16 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
         <div className="font-display text-6xl mb-4">The Fishermen.</div>
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/40 mb-2">
           Casting Sounds and Captivating Souls for His Glory

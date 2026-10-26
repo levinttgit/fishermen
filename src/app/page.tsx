@@ -117,7 +117,7 @@ export default function Home() {
           
           <div className="md:w-2/3 text-xl md:text-3xl font-medium text-black/80 leading-snug space-y-10">
             <p>
-              We are <strong>The Fishermen</strong>. Rooted in faith and driven by a passion for authentic rock, we create music designed to uplift, inspire, and point people toward hope.
+              What brought <strong>The Fishermen</strong> together was the Love of God, the Word of God, and the sheer joy of enjoying one of His greatest gifts to mankind—music.
             </p>
             <div>
               <Link 
