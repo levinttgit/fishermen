@@ -68,22 +68,29 @@ const bandPhotoUrl = "/fishermen/images/band.jpg";
 
 export default function AboutPage() {
   const fadeUp: Variants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 25 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
   };
 
   return (
     <div className="min-h-screen bg-[#F9F9F9] text-[#111111] font-sans selection:bg-black selection:text-white">
       {/* Navigation */}
-      <nav className="flex flex-col md:flex-row justify-between items-center px-8 py-10 w-full border-b border-black/10">
-        <Link href="/" className="font-display text-4xl md:text-5xl mb-6 md:mb-0 hover:opacity-75 transition">
+      <nav className="sticky top-0 z-50 bg-[#F9F9F9]/95 backdrop-blur-md flex flex-col md:flex-row justify-between items-center px-8 py-7 w-full border-b border-black/10 transition-all">
+        <Link href="/" className="font-display text-4xl md:text-5xl tracking-tight mb-4 md:mb-0 hover:opacity-75 transition">
           The Fishermen.
         </Link>
-        <div className="flex gap-8 font-bold text-xs uppercase tracking-widest text-[#111111]">
-          <Link href="/" className="hover:opacity-60 transition">Home</Link>
-          <Link href="/#listen" className="hover:opacity-60 transition">Listen</Link>
-          <Link href="/about" className="underline underline-offset-8 decoration-2 hover:opacity-60 transition">About</Link>
-          <a href="https://www.instagram.com/thefishermen.music/" target="_blank" rel="noopener noreferrer" className="hover:opacity-60 transition">Instagram</a>
+        <div className="flex items-center gap-8 font-bold text-xs uppercase tracking-[0.2em] text-[#111111]">
+          <Link href="/" className="hover:opacity-50 transition">Home</Link>
+          <Link href="/#listen" className="hover:opacity-50 transition">Listen</Link>
+          <Link href="/about" className="border-b-2 border-black pb-1 hover:opacity-50 transition">About</Link>
+          <a
+            href="https://www.instagram.com/thefishermen.music/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:opacity-50 transition flex items-center gap-1.5"
+          >
+            Instagram ↗
+          </a>
         </div>
       </nav>
 
@@ -93,16 +100,17 @@ export default function AboutPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="px-8 py-20 md:py-28 max-w-7xl mx-auto border-b border-black/10"
+          className="px-6 md:px-12 py-16 md:py-24 max-w-7xl mx-auto border-b border-black/10"
         >
           <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
-            {/* Band Photo (4x4 Square) */}
-            <div className="w-full lg:w-1/2 flex flex-col items-center">
-              <div className="w-full max-w-lg aspect-square bg-neutral-200 border border-black/10 relative overflow-hidden group shadow-lg">
+            
+            {/* Band Photo (Sticky on desktop for clean reading layout) */}
+            <div className="w-full lg:w-5/12 lg:sticky lg:top-28 flex flex-col items-center">
+              <div className="w-full aspect-square bg-neutral-200 border border-black/10 relative overflow-hidden shadow-2xl group">
                 <img
                   src={bandPhotoUrl}
                   alt="The Fishermen Band"
-                  className="w-full h-full object-cover object-center"
+                  className="w-full h-full object-cover object-center group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                   onError={(e) => {
                     e.currentTarget.style.display = "none";
                     const fallback = e.currentTarget.parentElement?.querySelector(".fallback-placeholder") as HTMLElement;
@@ -117,15 +125,21 @@ export default function AboutPage() {
                   <p className="text-xs uppercase tracking-widest text-black/40 mt-1">Place file in: public/images/band.jpg</p>
                 </div>
               </div>
-              <h2 className="font-display text-3xl md:text-4xl uppercase tracking-wider text-black/80 mt-4">
-                The Fishermen
-              </h2>
+              
+              <div className="w-full flex justify-between items-baseline mt-4 px-1">
+                <h2 className="font-display text-3xl md:text-4xl uppercase tracking-wider text-black">
+                  The Fishermen
+                </h2>
+                <span className="text-[11px] font-bold uppercase tracking-[0.25em] text-black/40">
+                  Brotherhood & Worship
+                </span>
+              </div>
             </div>
 
             {/* About Text */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-center">
-              <span className="font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block border border-black px-4 py-2 self-start">
-                Our Mission & Calling
+            <div className="w-full lg:w-7/12 flex flex-col justify-center">
+              <span className="font-bold tracking-[0.3em] uppercase text-xs mb-4 inline-block border border-black px-4 py-1.5 self-start">
+                Our Calling & Mission
               </span>
               <h1 className="font-display text-6xl md:text-8xl leading-none uppercase mb-8">
                 About The Band
@@ -141,7 +155,7 @@ export default function AboutPage() {
                 </p>
 
                 <p>
-                  Amidst the fun, the privilege, and the joy of making a joyful noise, we hold fast to this truth: <strong>only the Word of God has the power to transform hearts, renew minds, and save lives</strong>. Music on its own cannot lead people to God. That work is solely accomplished by the Word of God and the Holy Spirit drawing hearts to Jesus Christ.
+                  Amidst the fun, the privilege, and the joy of making a joyful noise, we hold fast to this truth: <strong className="text-black font-semibold">only the Word of God has the power to transform hearts, renew minds, and save lives</strong>. Music on its own cannot lead people to God. That work is solely accomplished by the Word of God and the Holy Spirit drawing hearts to Jesus Christ.
                 </p>
 
                 <p>
@@ -152,10 +166,13 @@ export default function AboutPage() {
                   We strive to pursue musicianship with excellence—to bless, inspire, and engage everyone who has a heart for God and an ear for authentic rock. Our conviction is that when we offer Him the very best of our gifts, He takes what is ordinary and makes it extraordinary.
                 </p>
 
+                {/* Quote Block */}
                 <div className="pt-6 border-t border-black/10">
-                  <blockquote className="italic text-lg md:text-xl text-black/90 font-serif mb-3">
+                  <blockquote className="border-l-4 border-black pl-5 py-1 text-lg md:text-xl text-black font-serif italic mb-4">
                     “Follow me, and I will make you fishers of men.”
-                    <span className="block text-xs not-italic font-bold font-sans uppercase tracking-widest text-black/50 mt-1">— Matthew 4:19</span>
+                    <span className="block text-xs not-italic font-bold font-sans uppercase tracking-[0.25em] text-black/50 mt-1.5">
+                      Matthew 4:19
+                    </span>
                   </blockquote>
                   <p className="font-display text-2xl md:text-3xl text-black tracking-wide uppercase pt-1">
                     Casting Sounds and Captivating Souls for His Glory.
@@ -167,16 +184,23 @@ export default function AboutPage() {
         </motion.section>
 
         {/* Band Members Section */}
-        <section className="bg-[#111111] text-white py-24 md:py-32 px-8">
+        <section className="bg-[#111111] text-white py-24 md:py-32 px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
-            <div className="mb-20">
-              <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-4 block">Lineup</span>
-              <h2 className="font-display text-6xl md:text-8xl uppercase leading-none">
-                Meet The <br /> Members
-              </h2>
+            {/* Lineup Header */}
+            <div className="mb-20 md:mb-24 flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-white/10 pb-10">
+              <div>
+                <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-3 block">Lineup</span>
+                <h2 className="font-display text-6xl md:text-8xl uppercase leading-none">
+                  Meet The Members
+                </h2>
+              </div>
+              <p className="max-w-md text-sm md:text-base text-white/60 leading-relaxed">
+                Five brothers united by Christ, sharing their personal testimonies and passion for authentic rock worship.
+              </p>
             </div>
 
-            <div className="space-y-16 md:space-y-24">
+            {/* Alternating Member Cards */}
+            <div className="space-y-24 md:space-y-32">
               {members.map((member, idx) => (
                 <motion.div
                   key={member.name}
@@ -184,15 +208,15 @@ export default function AboutPage() {
                   whileInView="visible"
                   viewport={{ once: true, margin: "-80px" }}
                   variants={fadeUp}
-                  className={`flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-10 md:gap-16 border-b border-white/10 pb-16 md:pb-24`}
+                  className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start gap-12 lg:gap-16 border-b border-white/10 pb-20 md:pb-28`}
                 >
-                  {/* Photo (4x4 square) */}
-                  <div className="w-full md:w-1/2 flex justify-center">
-                    <div className="w-full max-w-md aspect-square bg-neutral-900 border border-white/10 relative overflow-hidden group">
+                  {/* Photo (4x4 Square) */}
+                  <div className="w-full lg:w-5/12 flex justify-center">
+                    <div className="w-full max-w-md aspect-square bg-neutral-900 border border-white/15 relative overflow-hidden group shadow-2xl">
                       <img
                         src={member.image}
                         alt={member.name}
-                        className="w-full h-full object-cover object-top"
+                        className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-700 ease-out"
                         onError={(e) => {
                           e.currentTarget.style.display = "none";
                           const fallback = e.currentTarget.parentElement?.querySelector(".fallback-member-placeholder") as HTMLElement;
@@ -210,15 +234,16 @@ export default function AboutPage() {
                     </div>
                   </div>
 
-                  {/* Member Details */}
-                  <div className="w-full md:w-1/2 flex flex-col justify-center">
-                    <h3 className="font-display text-5xl md:text-7xl uppercase leading-none mb-3">
+                  {/* Member Details & Testimony */}
+                  <div className="w-full lg:w-7/12 flex flex-col justify-center">
+                    <h3 className="font-display text-5xl md:text-7xl uppercase leading-none mb-3 tracking-wide">
                       {member.name}
                     </h3>
-                    <p className="text-sm font-bold uppercase tracking-widest text-white/70 mb-6 border-b border-white/10 pb-4">
+                    <p className="text-sm font-bold uppercase tracking-[0.2em] text-white/70 mb-6 border-b border-white/10 pb-4">
                       {member.role}
                     </p>
-                    <div className="space-y-4 mb-8 text-base md:text-lg text-white/80 font-normal leading-relaxed">
+                    
+                    <div className="space-y-4 mb-8 text-base md:text-lg text-white/85 font-normal leading-relaxed">
                       {Array.isArray(member.bio) ? (
                         member.bio.map((paragraph, pIdx) => (
                           <p key={pIdx}>{paragraph}</p>
@@ -227,8 +252,10 @@ export default function AboutPage() {
                         <p>{member.bio}</p>
                       )}
                     </div>
-                    <div className="text-xs text-white/40 uppercase tracking-widest pt-2 border-t border-white/10">
-                      The Fishermen • {member.role.split('/')[0].trim()}
+                    
+                    <div className="text-xs text-white/40 uppercase tracking-[0.25em] pt-4 border-t border-white/10 flex items-center justify-between">
+                      <span>The Fishermen</span>
+                      <span>{member.role.split('/')[0].trim()}</span>
                     </div>
                   </div>
                 </motion.div>
@@ -240,10 +267,13 @@ export default function AboutPage() {
 
       {/* Footer */}
       <footer className="bg-[#111111] text-white py-16 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
-        <div className="font-display text-6xl mb-8">The Fishermen.</div>
-        <div className="text-xs font-bold uppercase tracking-widest text-white/40">
-          <p>© 2026 The Fishermen Music. All rights reserved.</p>
-        </div>
+        <div className="font-display text-6xl mb-4">The Fishermen.</div>
+        <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/40 mb-2">
+          Casting Sounds and Captivating Souls for His Glory
+        </p>
+        <p className="text-[11px] uppercase tracking-widest text-white/30">
+          © 2026 The Fishermen Music. All rights reserved.
+        </p>
       </footer>
     </div>
   );
