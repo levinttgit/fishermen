@@ -124,13 +124,13 @@ export default function AboutPage() {
                   className={`flex flex-col ${idx % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-10 md:gap-16 border-b border-white/10 pb-16 md:pb-24`}
                 >
                   {/* Photo Placeholder */}
-                  <div className="w-full md:w-1/2">
-                    <div className="w-full aspect-[4/5] bg-neutral-900 border-2 border-dashed border-white/20 flex flex-col items-center justify-center p-8 text-center relative">
+                  <div className="w-full md:w-1/2 flex justify-center">
+                    <div className="w-full max-w-md aspect-square bg-neutral-900 border-2 border-dashed border-white/20 flex flex-col items-center justify-center p-8 text-center relative">
                       <svg className="w-12 h-12 text-white/20 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
                       <span className="font-display text-2xl uppercase tracking-wide text-white/70">{member.name}</span>
-                      <span className="text-xs uppercase tracking-widest text-white/40 mt-1">Photo Placeholder (4:5 Portrait)</span>
+                      <span className="text-xs uppercase tracking-widest text-white/40 mt-1">Photo Placeholder (4×4 Square)</span>
                     </div>
                   </div>
 
