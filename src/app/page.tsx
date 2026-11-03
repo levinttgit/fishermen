@@ -60,7 +60,7 @@ export default function Home() {
             <img
               src="/fishermen/images/band.jpg"
               alt=""
-              className="w-full h-full object-cover object-center grayscale opacity-15"
+              className="w-full h-full object-cover object-center grayscale opacity-35"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-[#F9F9F9] via-[#F9F9F9]/60 to-[#F9F9F9]" />
           </div>
