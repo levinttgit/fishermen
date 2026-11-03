@@ -58,9 +58,9 @@ export default function Home() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img
-              src="/fishermen/images/band.jpg"
-              alt="The Fishermen"
-              className="w-full h-full object-cover object-center grayscale"
+              src="/fishermen/images/studio.jpg"
+              alt="Recording Studio"
+              className="w-full h-full object-cover object-center"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#111111]" />
           </div>
@@ -99,12 +99,12 @@ export default function Home() {
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6 border-b border-white/10 pb-6">
               <div>
                 <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-3 block">Latest Release</span>
-                <h2 className="font-display text-[3.5rem] sm:text-[5rem] md:text-[9rem] leading-none">
-                  Listen Now
+                <h2 className="font-display text-[3.5rem] sm:text-[5rem] md:text-[8rem] leading-none">
+                  In Control
                 </h2>
               </div>
               <p className="max-w-md text-white/70 font-normal text-base md:text-lg leading-relaxed">
-                Experience our latest single. Stream the video below and find us on your favorite music platforms.
+                Stream our latest single, <strong className="text-white font-semibold">“In Control”</strong>. Watch the official music video below and find us on your favorite music platforms.
               </p>
             </div>
             

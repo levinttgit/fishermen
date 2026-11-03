@@ -192,23 +192,44 @@ export default function AboutPage() {
         <section className="bg-[#111111] text-white py-24 md:py-32 px-6 md:px-12">
           <div className="max-w-7xl mx-auto">
             {/* Lineup Header */}
-            <div className="mb-20 md:mb-24 border-b border-white/10 pb-10">
+            <div className="mb-12 border-b border-white/10 pb-10">
               <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-3 block">Lineup</span>
-              <h2 className="font-display text-4xl sm:text-6xl md:text-8xl uppercase leading-none">
+              <h2 className="font-display text-4xl sm:text-6xl md:text-8xl uppercase leading-none mb-8">
                 Meet The Members
               </h2>
+
+              {/* Quick Jump Pills */}
+              <div className="flex flex-wrap items-center gap-2 md:gap-3">
+                <span className="text-xs uppercase tracking-widest text-white/40 mr-2">Jump to:</span>
+                {members.map((member) => {
+                  const shortName = member.name.split(" ")[0];
+                  const id = shortName.toLowerCase();
+                  return (
+                    <a
+                      key={member.name}
+                      href={`#${id}`}
+                      className="px-3.5 py-1.5 border border-white/20 text-xs font-bold uppercase tracking-wider text-white/80 hover:bg-white hover:text-black hover:border-white transition duration-200"
+                    >
+                      {shortName}
+                    </a>
+                  );
+                })}
+              </div>
             </div>
 
             {/* Alternating Member Cards */}
             <div className="space-y-24 md:space-y-32">
-              {members.map((member, idx) => (
+              {members.map((member, idx) => {
+                const memberId = member.name.split(" ")[0].toLowerCase();
+                return (
                 <motion.div
+                  id={memberId}
                   key={member.name}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, margin: "-80px" }}
                   variants={fadeUp}
-                  className={`flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start gap-12 lg:gap-16 ${idx !== members.length - 1 ? 'border-b border-white/10 pb-20 md:pb-28' : 'pb-8'}`}
+                  className={`scroll-mt-28 flex flex-col ${idx % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} items-start gap-12 lg:gap-16 ${idx !== members.length - 1 ? 'border-b border-white/10 pb-20 md:pb-28' : 'pb-8'}`}
                 >
                   {/* Photo (4x4 Square) */}
                   <div className="w-full lg:w-5/12 flex justify-center">
@@ -259,7 +280,8 @@ export default function AboutPage() {
                     </div>
                   </div>
                 </motion.div>
-              ))}
+                );
+              })}
             </div>
           </div>
         </section>
