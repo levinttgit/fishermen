@@ -144,7 +144,7 @@ export default function Home() {
         >
           <div className="md:w-1/3">
             <h2 className="font-display text-[3.5rem] sm:text-[5rem] md:text-[8rem] leading-none mb-8">
-              About <br/> Us.
+              About Us.
             </h2>
           </div>
           
