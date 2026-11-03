@@ -52,19 +52,19 @@ export const socialLinks = [
   },
   {
     name: "YouTube",
-    href: "https://youtu.be/LTtWteeFRgI?si=tIfoiuuhbf3RcfS2",
+    href: "https://www.youtube.com/@thefishermen-music",
     icon: YouTubeIcon,
-    sub: "Watch Music Video",
+    sub: "@thefishermen-music",
   },
   {
     name: "Spotify",
-    href: "https://open.spotify.com",
+    href: "https://open.spotify.com/artist/5J7hObnvlhAEfYQKweKoOz",
     icon: SpotifyIcon,
     sub: "Stream Music",
   },
   {
     name: "YouTube Music",
-    href: "https://music.youtube.com",
+    href: "https://music.youtube.com/playlist?list=OLAK5uy_lY2h_cJvsuxuPDH_VsCw7CiuFh9ftfEbk",
     icon: YouTubeMusicIcon,
     sub: "Listen Online",
   },
