@@ -53,8 +53,19 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="px-8 py-12 md:py-20 flex flex-col items-center text-center max-w-7xl mx-auto"
+          className="relative px-8 py-12 md:py-20 flex flex-col items-center text-center max-w-none overflow-hidden"
         >
+          {/* Background Image */}
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/fishermen/images/band.jpg"
+              alt=""
+              className="w-full h-full object-cover object-center grayscale opacity-15"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#F9F9F9] via-[#F9F9F9]/60 to-[#F9F9F9]" />
+          </div>
+
+          <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
           <h1 className="font-display text-[4.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] leading-[0.85] mb-6 tracking-tight">
             Hope <br/> Through <br/> Harmony.
           </h1>
@@ -70,6 +81,7 @@ export default function Home() {
             <Link href="/about" className="flex items-center justify-center gap-3 bg-transparent border-2 border-[#111111] text-[#111111] px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-[#111111] hover:text-white transition">
               About The Band
             </Link>
+          </div>
           </div>
 
         </motion.section>
