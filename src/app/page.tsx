@@ -58,9 +58,9 @@ export default function Home() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img
-              src="/fishermen/images/studio.jpg"
-              alt="Recording Studio"
-              className="w-full h-full object-cover object-center"
+              src="/fishermen/images/band.jpg"
+              alt="The Fishermen"
+              className="w-full h-full object-cover object-center grayscale"
             />
             <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#111111]" />
           </div>
