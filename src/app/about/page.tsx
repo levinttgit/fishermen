@@ -76,12 +76,12 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-[#F9F9F9] text-[#111111] font-sans selection:bg-black selection:text-white">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-[#F9F9F9]/95 backdrop-blur-md flex flex-col md:flex-row justify-between items-center px-8 py-7 w-full border-b border-black/10 transition-all">
-        <Link href="/" className="font-display text-4xl md:text-5xl tracking-tight mb-4 md:mb-0 hover:opacity-75 transition">
+      <nav className="sticky top-0 z-50 bg-[#F9F9F9]/95 backdrop-blur-md flex justify-between items-center px-6 md:px-8 py-4 md:py-7 w-full border-b border-black/10 transition-all">
+        <Link href="/" className="font-display text-3xl md:text-5xl tracking-tight hover:opacity-75 transition">
           The Fishermen.
         </Link>
-        <div className="flex items-center gap-6 md:gap-8">
-          <div className="flex items-center gap-6 md:gap-8 font-bold text-xs uppercase tracking-[0.2em] text-[#111111]">
+        <div className="flex items-center gap-4 md:gap-8">
+          <div className="flex items-center gap-4 md:gap-8 font-bold text-xs uppercase tracking-[0.2em] text-[#111111]">
             <Link href="/" className="hover:opacity-50 transition">Home</Link>
             <Link href="/#listen" className="hover:opacity-50 transition">Listen</Link>
             <Link href="/about" className="border-b-2 border-black pb-1 hover:opacity-50 transition">About</Link>
@@ -150,7 +150,7 @@ export default function AboutPage() {
 
             {/* About Text */}
             <div className="w-full lg:w-7/12 flex flex-col justify-center">
-              <h1 className="font-display text-6xl md:text-8xl leading-none uppercase mb-8">
+              <h1 className="font-display text-4xl sm:text-6xl md:text-8xl leading-none uppercase mb-8">
                 About The Band
               </h1>
 
@@ -194,7 +194,7 @@ export default function AboutPage() {
             {/* Lineup Header */}
             <div className="mb-20 md:mb-24 border-b border-white/10 pb-10">
               <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-3 block">Lineup</span>
-              <h2 className="font-display text-6xl md:text-8xl uppercase leading-none">
+              <h2 className="font-display text-4xl sm:text-6xl md:text-8xl uppercase leading-none">
                 Meet The Members
               </h2>
             </div>
@@ -236,7 +236,7 @@ export default function AboutPage() {
 
                   {/* Member Details & Testimony */}
                   <div className="w-full lg:w-7/12 flex flex-col justify-center">
-                    <h3 className="font-display text-5xl md:text-7xl uppercase leading-none mb-3 tracking-wide">
+                    <h3 className="font-display text-3xl sm:text-5xl md:text-7xl uppercase leading-none mb-3 tracking-wide">
                       {member.name}
                     </h3>
                     <p className="text-sm font-bold uppercase tracking-[0.2em] text-white/70 mb-6 border-b border-white/10 pb-4">
@@ -272,19 +272,24 @@ export default function AboutPage() {
           Casting Sounds and Captivating Souls for His Glory
         </p>
 
-        {/* Footer Social & Streaming Links */}
-        <div className="flex flex-wrap justify-center gap-6 mb-10 text-xs font-bold uppercase tracking-widest text-white/70">
-          {socialLinks.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white hover:underline underline-offset-4 transition"
-            >
-              {item.name} ↗
-            </a>
-          ))}
+        {/* Footer Social Icons */}
+        <div className="flex justify-center gap-3 mb-10">
+          {socialLinks.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.name}
+                title={item.name}
+                className="p-2 border border-white/20 hover:border-white hover:bg-white hover:text-black transition duration-200"
+              >
+                <Icon />
+              </a>
+            );
+          })}
         </div>
         <p className="text-[11px] uppercase tracking-widest text-white/30">
           © 2026 The Fishermen Music. All rights reserved.

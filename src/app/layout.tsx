@@ -3,7 +3,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "The Fishermen | Christian Rock Band",
-  description: "Christian rock combining the timeless energy of Petra with the modern anthemic sound of MercyMe.",
+  description: "The Fishermen — Christian rock bringing authentic worship, bold musicianship, and the living hope of Jesus Christ. Casting Sounds and Captivating Souls for His Glory.",
 };
 
 export default function RootLayout({
