@@ -11,21 +11,21 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F9F9] text-[#111111] font-sans selection:bg-black selection:text-white">
+    <div className="min-h-screen bg-[#0D0D0D] text-white font-sans selection:bg-white selection:text-black">
       {/* Sticky Top Navigation */}
-      <nav className="sticky top-0 z-50 bg-[#F9F9F9]/95 backdrop-blur-md flex justify-between items-center px-6 md:px-8 py-4 md:py-7 w-full border-b border-black/10 transition-all">
-        <Link href="/" className="font-display text-3xl md:text-5xl hover:opacity-75 transition">
+      <nav className="sticky top-0 z-50 bg-[#0D0D0D]/90 backdrop-blur-md flex justify-between items-center px-6 md:px-8 py-4 md:py-6 w-full border-b border-white/10 transition-all">
+        <Link href="/" className="font-display text-3xl md:text-5xl text-white hover:opacity-75 transition">
           The Fishermen.
         </Link>
 
         <div className="flex items-center gap-4 md:gap-8">
-          <div className="flex gap-4 md:gap-6 font-bold text-xs uppercase tracking-[0.2em] text-[#111111]">
-            <a href="#listen" className="hover:opacity-50 transition">Listen</a>
-            <Link href="/about" className="hover:opacity-50 transition">About</Link>
+          <div className="flex gap-4 md:gap-6 font-bold text-xs uppercase tracking-[0.2em] text-white/80">
+            <a href="#listen" className="hover:text-white transition">Listen</a>
+            <Link href="/about" className="hover:text-white transition">About</Link>
           </div>
 
           {/* Social Icons Bar in Header */}
-          <div className="hidden sm:flex items-center gap-3 pl-6 border-l border-black/15">
+          <div className="hidden sm:flex items-center gap-3 pl-6 border-l border-white/15">
             {socialLinks.map((item) => {
               const Icon = item.icon;
               return (
@@ -36,7 +36,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   aria-label={item.name}
                   title={item.name}
-                  className="p-2 border border-black/15 hover:border-black hover:bg-black hover:text-white transition duration-200"
+                  className="p-2 border border-white/20 text-white hover:border-white hover:bg-white hover:text-black transition duration-200"
                 >
                   <Icon />
                 </a>
@@ -53,16 +53,16 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="relative px-8 py-16 md:py-24 flex flex-col items-center text-center max-w-none overflow-hidden bg-black text-white"
+          className="relative px-8 py-20 md:py-32 flex flex-col items-center text-center max-w-none overflow-hidden bg-[#0D0D0D] text-white"
         >
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img
               src="/fishermen/images/studio.jpg"
               alt="Recording Studio"
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center opacity-30"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#111111]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/90 via-[#0D0D0D]/40 to-[#0D0D0D]" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
@@ -78,7 +78,7 @@ export default function Home() {
                 <PlayIcon />
                 Watch Video
               </a>
-              <Link href="/about" className="flex items-center justify-center gap-3 bg-transparent border-2 border-white text-white px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition">
+              <Link href="/about" className="flex items-center justify-center gap-3 bg-transparent border-2 border-white/80 text-white px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition">
                 About The Band
               </Link>
             </div>
@@ -152,22 +152,22 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeUp}
-          className="py-16 md:py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 items-start"
+          className="py-20 md:py-28 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 items-start border-t border-white/10"
         >
           <div className="md:w-1/3">
-            <h2 className="font-display text-[3.5rem] sm:text-[5rem] md:text-[8rem] leading-none mb-4">
+            <h2 className="font-display text-[3.5rem] sm:text-[5rem] md:text-[8rem] leading-none mb-4 text-white">
               About Us.
             </h2>
           </div>
           
-          <div className="md:w-2/3 text-xl md:text-3xl font-medium text-black/80 leading-snug space-y-6">
+          <div className="md:w-2/3 text-xl md:text-3xl font-normal text-white/85 leading-snug space-y-8">
             <p>
-              What brought <strong>The Fishermen</strong> together was the Love of God, the Word of God, and the sheer joy of enjoying one of His greatest gifts to mankind—music.
+              What brought <strong className="text-white font-semibold">The Fishermen</strong> together was the Love of God, the Word of God, and the sheer joy of enjoying one of His greatest gifts to mankind—music.
             </p>
             <div>
               <Link 
                 href="/about" 
-                className="inline-flex items-center gap-4 bg-[#111111] text-white px-8 py-4 font-bold uppercase tracking-widest text-sm hover:bg-black/80 transition"
+                className="inline-flex items-center gap-4 bg-white text-black px-8 py-4 font-bold uppercase tracking-widest text-sm hover:bg-white/80 transition shadow-lg"
               >
                 Meet The Band Members & Read Our Story →
               </Link>

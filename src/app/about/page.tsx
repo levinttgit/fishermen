@@ -74,21 +74,21 @@ export default function AboutPage() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F9F9] text-[#111111] font-sans selection:bg-black selection:text-white">
+    <div className="min-h-screen bg-[#0D0D0D] text-white font-sans selection:bg-white selection:text-black">
       {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-[#F9F9F9]/95 backdrop-blur-md flex justify-between items-center px-6 md:px-8 py-4 md:py-7 w-full border-b border-black/10 transition-all">
-        <Link href="/" className="font-display text-3xl md:text-5xl tracking-tight hover:opacity-75 transition">
+      <nav className="sticky top-0 z-50 bg-[#0D0D0D]/90 backdrop-blur-md flex justify-between items-center px-6 md:px-8 py-4 md:py-6 w-full border-b border-white/10 transition-all">
+        <Link href="/" className="font-display text-3xl md:text-5xl tracking-tight text-white hover:opacity-75 transition">
           The Fishermen.
         </Link>
         <div className="flex items-center gap-4 md:gap-8">
-          <div className="flex items-center gap-4 md:gap-8 font-bold text-xs uppercase tracking-[0.2em] text-[#111111]">
-            <Link href="/" className="hover:opacity-50 transition">Home</Link>
-            <Link href="/#listen" className="hover:opacity-50 transition">Listen</Link>
-            <Link href="/about" className="border-b-2 border-black pb-1 hover:opacity-50 transition">About</Link>
+          <div className="flex items-center gap-4 md:gap-8 font-bold text-xs uppercase tracking-[0.2em] text-white/80">
+            <Link href="/" className="hover:text-white transition">Home</Link>
+            <Link href="/#listen" className="hover:text-white transition">Listen</Link>
+            <Link href="/about" className="border-b-2 border-white pb-1 text-white hover:opacity-80 transition">About</Link>
           </div>
 
           {/* Social Icons Bar in Header */}
-          <div className="hidden sm:flex items-center gap-3 pl-6 border-l border-black/15">
+          <div className="hidden sm:flex items-center gap-3 pl-6 border-l border-white/15">
             {socialLinks.map((item) => {
               const Icon = item.icon;
               return (
@@ -99,7 +99,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   aria-label={item.name}
                   title={item.name}
-                  className="p-2 border border-black/15 hover:border-black hover:bg-black hover:text-white transition duration-200"
+                  className="p-2 border border-white/20 text-white hover:border-white hover:bg-white hover:text-black transition duration-200"
                 >
                   <Icon />
                 </a>
@@ -115,13 +115,13 @@ export default function AboutPage() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="px-6 md:px-12 py-16 md:py-24 max-w-7xl mx-auto border-b border-black/10"
+          className="px-6 md:px-12 py-16 md:py-24 max-w-7xl mx-auto border-b border-white/10"
         >
           <div className="flex flex-col lg:flex-row items-start gap-12 lg:gap-16">
             
             {/* Band Photo (Sticky on desktop for clean reading layout) */}
             <div className="w-full lg:w-5/12 lg:sticky lg:top-28 flex flex-col items-center">
-              <div className="w-full aspect-square bg-neutral-200 border border-black/10 relative overflow-hidden shadow-2xl group">
+              <div className="w-full aspect-square bg-neutral-900 border border-white/15 relative overflow-hidden shadow-2xl group">
                 <img
                   src={bandPhotoUrl}
                   alt="The Fishermen Band"
@@ -132,17 +132,17 @@ export default function AboutPage() {
                     if (fallback) fallback.style.display = "flex";
                   }}
                 />
-                <div className="fallback-placeholder hidden absolute inset-0 w-full h-full border-2 border-dashed border-black/30 flex-col items-center justify-center text-center p-8">
-                  <svg className="w-16 h-16 text-black/30 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <div className="fallback-placeholder hidden absolute inset-0 w-full h-full border-2 border-dashed border-white/20 flex-col items-center justify-center text-center p-8">
+                  <svg className="w-16 h-16 text-white/30 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  <p className="font-display text-2xl md:text-3xl uppercase tracking-wider text-black/60">Band Picture: band.jpg</p>
-                  <p className="text-xs uppercase tracking-widest text-black/40 mt-1">Place file in: public/images/band.jpg</p>
+                  <p className="font-display text-2xl md:text-3xl uppercase tracking-wider text-white/60">Band Picture: band.jpg</p>
+                  <p className="text-xs uppercase tracking-widest text-white/40 mt-1">Place file in: public/images/band.jpg</p>
                 </div>
               </div>
               
               <div className="w-full flex justify-center mt-4">
-                <h2 className="font-display text-3xl md:text-4xl uppercase tracking-wider text-black">
+                <h2 className="font-display text-3xl md:text-4xl uppercase tracking-wider text-white">
                   The Fishermen
                 </h2>
               </div>
@@ -150,17 +150,17 @@ export default function AboutPage() {
 
             {/* About Text */}
             <div className="w-full lg:w-7/12 flex flex-col justify-center">
-              <h1 className="font-display text-4xl sm:text-6xl md:text-8xl leading-none uppercase mb-8">
+              <h1 className="font-display text-4xl sm:text-6xl md:text-8xl leading-none uppercase mb-8 text-white">
                 About The Band
               </h1>
 
-              <div className="space-y-6 text-base md:text-lg font-normal text-black/80 leading-relaxed">
-                <p className="text-xl md:text-2xl font-medium text-black leading-snug">
+              <div className="space-y-6 text-base md:text-lg font-normal text-white/80 leading-relaxed">
+                <p className="text-xl md:text-2xl font-normal text-white leading-snug">
                   From diverse backgrounds, eclectic musical influences, varied writing styles, and versatile playing skills over the years, The Fishermen has grown to become a true brotherhood of musicians. We bring our God-given gifts together—sharpening, encouraging, and building one another up in faith and craft.
                 </p>
 
                 <p>
-                  Amidst the fun, the privilege, and the joy of making a joyful noise, we hold fast to this truth: <strong className="text-black font-semibold">only the Word of God has the power to transform hearts, renew minds, and save lives</strong>. Music on its own cannot lead people to God. That work is solely accomplished by the Word of God and the Holy Spirit drawing hearts to Jesus Christ.
+                  Amidst the fun, the privilege, and the joy of making a joyful noise, we hold fast to this truth: <strong className="text-white font-semibold">only the Word of God has the power to transform hearts, renew minds, and save lives</strong>. Music on its own cannot lead people to God. That work is solely accomplished by the Word of God and the Holy Spirit drawing hearts to Jesus Christ.
                 </p>
 
                 <p>
@@ -172,14 +172,14 @@ export default function AboutPage() {
                 </p>
 
                 {/* Quote Block */}
-                <div className="pt-6 border-t border-black/10">
-                  <blockquote className="border-l-4 border-black pl-5 py-1 text-lg md:text-xl text-black font-serif italic mb-4">
+                <div className="pt-6 border-t border-white/10">
+                  <blockquote className="border-l-4 border-white pl-5 py-1 text-lg md:text-xl text-white font-serif italic mb-4">
                     “Follow me, and I will make you fishers of men.”
-                    <span className="block text-xs not-italic font-bold font-sans uppercase tracking-[0.25em] text-black/50 mt-1.5">
+                    <span className="block text-xs not-italic font-bold font-sans uppercase tracking-[0.25em] text-white/50 mt-1.5">
                       Matthew 4:19
                     </span>
                   </blockquote>
-                  <p className="font-display text-2xl md:text-3xl text-black tracking-wide uppercase pt-1">
+                  <p className="font-display text-2xl md:text-3xl text-white tracking-wide uppercase pt-1">
                     Casting Sounds and Captivating Souls for His Glory.
                   </p>
                 </div>
