@@ -60,9 +60,9 @@ export default function Home() {
             <img
               src="/fishermen/images/band.jpg"
               alt=""
-              className="w-full h-full object-cover object-center grayscale opacity-35"
+              className="w-full h-full object-cover object-center grayscale opacity-80"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#F9F9F9] via-[#F9F9F9]/60 to-[#F9F9F9]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#F9F9F9]/60 via-[#F9F9F9]/30 to-[#F9F9F9]/90" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
