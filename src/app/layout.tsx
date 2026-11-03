@@ -4,6 +4,28 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "The Fishermen | Christian Rock Band",
   description: "The Fishermen — Christian rock bringing authentic worship, bold musicianship, and the living hope of Jesus Christ. Casting Sounds and Captivating Souls for His Glory.",
+  metadataBase: new URL("https://levinttgit.github.io/fishermen/"),
+  openGraph: {
+    title: "The Fishermen | Christian Rock Band",
+    description: "Christian rock bringing authentic worship, bold musicianship, and the living hope of Jesus Christ. Casting Sounds and Captivating Souls for His Glory.",
+    url: "https://levinttgit.github.io/fishermen/",
+    siteName: "The Fishermen",
+    images: [
+      {
+        url: "/fishermen/images/band.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "The Fishermen Band",
+      },
+    ],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "The Fishermen | Christian Rock Band",
+    description: "Christian rock bringing authentic worship, bold musicianship, and the living hope of Jesus Christ.",
+    images: ["/fishermen/images/band.jpg"],
+  },
 };
 
 export default function RootLayout({

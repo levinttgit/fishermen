@@ -99,7 +99,7 @@ export default function AboutPage() {
                   rel="noopener noreferrer"
                   aria-label={item.name}
                   title={item.name}
-                  className="p-2 border border-white/20 text-white hover:border-white hover:bg-white hover:text-black transition duration-200"
+                  className="p-2.5 sm:p-2 border border-white/20 text-white hover:border-white hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition duration-200"
                 >
                   <Icon />
                 </a>
@@ -175,7 +175,7 @@ export default function AboutPage() {
                 <div className="pt-6 border-t border-white/10">
                   <blockquote className="border-l-4 border-white pl-5 py-1 text-lg md:text-xl text-white font-serif italic mb-4">
                     “Follow me, and I will make you fishers of men.”
-                    <span className="block text-xs not-italic font-bold font-sans uppercase tracking-[0.25em] text-white/50 mt-1.5">
+                    <span className="block text-xs not-italic font-bold font-sans uppercase tracking-[0.25em] text-white/65 mt-1.5">
                       Matthew 4:19
                     </span>
                   </blockquote>
@@ -193,14 +193,14 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto">
             {/* Lineup Header */}
             <div className="mb-12 border-b border-white/10 pb-10">
-              <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-3 block">Lineup</span>
+              <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/65 mb-3 block">Lineup</span>
               <h2 className="font-display text-4xl sm:text-6xl md:text-8xl uppercase leading-none mb-8">
                 Meet The Members
               </h2>
 
               {/* Quick Jump Pills */}
               <div className="flex flex-wrap items-center gap-2 md:gap-3">
-                <span className="text-xs uppercase tracking-widest text-white/40 mr-2">Jump to:</span>
+                <span className="text-xs uppercase tracking-widest text-white/60 mr-2">Jump to:</span>
                 {members.map((member) => {
                   const shortName = member.name.split(" ")[0];
                   const id = shortName.toLowerCase();
@@ -274,7 +274,7 @@ export default function AboutPage() {
                       )}
                     </div>
                     
-                    <div className="text-xs text-white/40 uppercase tracking-[0.25em] pt-4 border-t border-white/10 flex items-center justify-between">
+                    <div className="text-xs text-white/60 uppercase tracking-[0.25em] pt-4 border-t border-white/10 flex items-center justify-between">
                       <span>The Fishermen</span>
                       <span>{member.role.split('/')[0].trim()}</span>
                     </div>
@@ -290,7 +290,7 @@ export default function AboutPage() {
       {/* Footer */}
       <footer className="bg-[#111111] text-white py-16 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
         <div className="font-display text-6xl mb-4">The Fishermen.</div>
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/40 mb-8">
+        <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/60 mb-8">
           Casting Sounds and Captivating Souls for His Glory
         </p>
 
@@ -306,14 +306,14 @@ export default function AboutPage() {
                 rel="noopener noreferrer"
                 aria-label={item.name}
                 title={item.name}
-                className="p-2 border border-white/20 hover:border-white hover:bg-white hover:text-black transition duration-200"
+                className="p-2.5 sm:p-2 border border-white/20 hover:border-white hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition duration-200"
               >
                 <Icon />
               </a>
             );
           })}
         </div>
-        <p className="text-[11px] uppercase tracking-widest text-white/30">
+        <p className="text-[11px] uppercase tracking-widest text-white/60">
           © 2026 The Fishermen Music. All rights reserved.
         </p>
       </footer>

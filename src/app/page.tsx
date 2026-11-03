@@ -43,7 +43,7 @@ export default function Home() {
                   rel="noopener noreferrer"
                   aria-label={item.name}
                   title={item.name}
-                  className="p-2 border border-white/20 text-white hover:border-white hover:bg-white hover:text-black transition duration-200"
+                  className="p-2.5 sm:p-2 border border-white/20 text-white hover:border-white hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition duration-200"
                 >
                   <Icon />
                 </a>
@@ -105,7 +105,7 @@ export default function Home() {
           <div className="max-w-7xl mx-auto">
             <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6 border-b border-white/10 pb-6">
               <div>
-                <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-3 block">Latest Release</span>
+                <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/65 mb-3 block">Latest Release</span>
                 <h2 className="font-display text-[3.5rem] sm:text-[5rem] md:text-[8rem] leading-none">
                   In Control
                 </h2>
@@ -129,7 +129,7 @@ export default function Home() {
 
             {/* Quick Stream Buttons under Video */}
             <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap justify-center md:justify-between items-center gap-6">
-              <span className="font-bold uppercase tracking-[0.25em] text-xs text-white/50">
+              <span className="font-bold uppercase tracking-[0.25em] text-xs text-white/65">
                 Stream on your platform:
               </span>
               <div className="flex flex-wrap gap-3">
@@ -186,7 +186,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="bg-[#111111] text-white py-12 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
         <div className="font-display text-6xl mb-4">The Fishermen.</div>
-        <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/40 mb-8">
+        <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/60 mb-8">
           Casting Sounds and Captivating Souls for His Glory
         </p>
         
@@ -202,7 +202,7 @@ export default function Home() {
                 rel="noopener noreferrer"
                 aria-label={item.name}
                 title={item.name}
-                className="p-2 border border-white/20 hover:border-white hover:bg-white hover:text-black transition duration-200"
+                className="p-2.5 sm:p-2 border border-white/20 hover:border-white hover:bg-white hover:text-black focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white transition duration-200"
               >
                 <Icon />
               </a>
@@ -210,7 +210,7 @@ export default function Home() {
           })}
         </div>
 
-        <p className="text-[11px] uppercase tracking-widest text-white/30">
+        <p className="text-[11px] uppercase tracking-widest text-white/60">
           © 2026 The Fishermen Music. All rights reserved.
         </p>
       </footer>
