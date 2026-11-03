@@ -53,11 +53,8 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="px-8 py-20 md:py-36 flex flex-col items-center text-center max-w-7xl mx-auto"
+          className="px-8 py-12 md:py-20 flex flex-col items-center text-center max-w-7xl mx-auto"
         >
-          <span className="font-bold tracking-[0.3em] uppercase text-xs mb-8 block border border-black px-4 py-2">
-            New Music Video Out Now
-          </span>
           <h1 className="font-display text-[7.5rem] sm:text-[10rem] md:text-[14rem] leading-[0.85] mb-10 tracking-tight">
             Hope <br/> Through <br/> Harmony.
           </h1>
@@ -75,29 +72,6 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* Connected Streaming & Social Hub Strip */}
-          <div className="w-full border-t border-b border-black/10 py-6 grid grid-cols-2 md:grid-cols-4 gap-4">
-            {socialLinks.map((item) => {
-              const Icon = item.icon;
-              return (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-3 py-3 px-4 hover:bg-black/5 transition group"
-                >
-                  <span className="p-2 border border-black/20 group-hover:bg-black group-hover:text-white group-hover:border-black transition">
-                    <Icon />
-                  </span>
-                  <div className="text-left">
-                    <div className="font-display text-lg tracking-wide uppercase leading-none">{item.name}</div>
-                    <div className="text-[11px] uppercase tracking-widest text-black/50 font-bold">{item.sub}</div>
-                  </div>
-                </a>
-              );
-            })}
-          </div>
         </motion.section>
 
         {/* Listen Now / Video Section */}
@@ -114,7 +88,7 @@ export default function Home() {
               <div>
                 <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-3 block">Latest Release</span>
                 <h2 className="font-display text-[6rem] md:text-[9rem] leading-none">
-                  Listen <br/> Now
+                  Listen Now
                 </h2>
               </div>
               <p className="max-w-md text-white/70 font-normal text-base md:text-lg leading-relaxed">
@@ -197,19 +171,24 @@ export default function Home() {
           Casting Sounds and Captivating Souls for His Glory
         </p>
         
-        {/* Footer Social & Streaming Links */}
-        <div className="flex flex-wrap justify-center gap-6 mb-10 text-xs font-bold uppercase tracking-widest text-white/70">
-          {socialLinks.map((item) => (
-            <a
-              key={item.name}
-              href={item.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white hover:underline underline-offset-4 transition"
-            >
-              {item.name} ↗
-            </a>
-          ))}
+        {/* Footer Social Icons */}
+        <div className="flex justify-center gap-3 mb-10">
+          {socialLinks.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={item.name}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={item.name}
+                title={item.name}
+                className="p-2 border border-white/20 hover:border-white hover:bg-white hover:text-black transition duration-200"
+              >
+                <Icon />
+              </a>
+            );
+          })}
         </div>
 
         <p className="text-[11px] uppercase tracking-widest text-white/30">
