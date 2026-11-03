@@ -55,10 +55,10 @@ export default function Home() {
           variants={fadeUp}
           className="px-8 py-12 md:py-20 flex flex-col items-center text-center max-w-7xl mx-auto"
         >
-          <h1 className="font-display text-[4.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] leading-[0.85] mb-10 tracking-tight">
+          <h1 className="font-display text-[4.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] leading-[0.85] mb-6 tracking-tight">
             Hope <br/> Through <br/> Harmony.
           </h1>
-          <p className="text-lg md:text-2xl font-normal text-black/70 max-w-2xl mx-auto mb-12 leading-relaxed">
+          <p className="text-lg md:text-2xl font-normal text-black/70 max-w-2xl mx-auto mb-8 leading-relaxed">
             Christian rock bringing authentic worship, bold musicianship, and the living hope of Jesus Christ.
           </p>
           
@@ -81,10 +81,10 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeUp}
-          className="w-full bg-[#111111] text-white py-28 md:py-36 px-8"
+          className="w-full bg-[#111111] text-white py-16 md:py-24 px-8"
         >
           <div className="max-w-7xl mx-auto">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-16 gap-8 border-b border-white/10 pb-8">
+            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6 border-b border-white/10 pb-6">
               <div>
                 <span className="font-bold tracking-[0.3em] uppercase text-xs text-white/50 mb-3 block">Latest Release</span>
                 <h2 className="font-display text-[3.5rem] sm:text-[5rem] md:text-[9rem] leading-none">
@@ -109,7 +109,7 @@ export default function Home() {
             </div>
 
             {/* Quick Stream Buttons under Video */}
-            <div className="mt-12 pt-8 border-t border-white/10 flex flex-wrap justify-center md:justify-between items-center gap-6">
+            <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap justify-center md:justify-between items-center gap-6">
               <span className="font-bold uppercase tracking-[0.25em] text-xs text-white/50">
                 Stream on your platform:
               </span>
@@ -140,15 +140,15 @@ export default function Home() {
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
           variants={fadeUp}
-          className="py-28 md:py-36 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-16 md:gap-32 items-start"
+          className="py-16 md:py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 items-start"
         >
           <div className="md:w-1/3">
-            <h2 className="font-display text-[3.5rem] sm:text-[5rem] md:text-[8rem] leading-none mb-8">
+            <h2 className="font-display text-[3.5rem] sm:text-[5rem] md:text-[8rem] leading-none mb-4">
               About Us.
             </h2>
           </div>
           
-          <div className="md:w-2/3 text-xl md:text-3xl font-medium text-black/80 leading-snug space-y-10">
+          <div className="md:w-2/3 text-xl md:text-3xl font-medium text-black/80 leading-snug space-y-6">
             <p>
               What brought <strong>The Fishermen</strong> together was the Love of God, the Word of God, and the sheer joy of enjoying one of His greatest gifts to mankind—music.
             </p>
@@ -165,7 +165,7 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#111111] text-white py-16 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
+      <footer className="bg-[#111111] text-white py-12 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
         <div className="font-display text-6xl mb-4">The Fishermen.</div>
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/40 mb-8">
           Casting Sounds and Captivating Souls for His Glory
