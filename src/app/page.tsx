@@ -11,10 +11,17 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen bg-[#0D0D0D] text-white font-sans selection:bg-white selection:text-black">
+    <div id="top" className="min-h-screen bg-[#0D0D0D] text-white font-sans selection:bg-white selection:text-black">
       {/* Sticky Top Navigation */}
       <nav className="sticky top-0 z-50 bg-[#0D0D0D]/90 backdrop-blur-md flex justify-between items-center px-6 md:px-8 py-4 md:py-6 w-full border-b border-white/10 transition-all">
-        <Link href="/" className="font-display text-3xl md:text-5xl text-white hover:opacity-75 transition">
+        <Link 
+          href="#top" 
+          onClick={(e) => {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+          className="font-display text-3xl md:text-5xl text-white hover:opacity-75 transition cursor-pointer"
+        >
           The Fishermen.
         </Link>
 
