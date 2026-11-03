@@ -53,35 +53,35 @@ export default function Home() {
           initial="hidden"
           animate="visible"
           variants={fadeUp}
-          className="relative px-8 py-12 md:py-20 flex flex-col items-center text-center max-w-none overflow-hidden"
+          className="relative px-8 py-16 md:py-24 flex flex-col items-center text-center max-w-none overflow-hidden bg-black text-white"
         >
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img
-              src="/fishermen/images/band.jpg"
-              alt=""
-              className="w-full h-full object-cover object-center grayscale opacity-80"
+              src="/fishermen/images/studio.jpg"
+              alt="Recording Studio"
+              className="w-full h-full object-cover object-center"
             />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#F9F9F9]/60 via-[#F9F9F9]/30 to-[#F9F9F9]/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-[#111111]" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
-          <h1 className="font-display text-[4.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] leading-[0.85] mb-6 tracking-tight">
-            Hope <br/> Through <br/> Harmony.
-          </h1>
-          <p className="text-lg md:text-2xl font-normal text-black/70 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Christian rock bringing authentic worship, bold musicianship, and the living hope of Jesus Christ.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto mb-8">
-            <a href="#listen" className="flex items-center justify-center gap-3 bg-[#111111] text-white px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-black/80 transition">
-              <PlayIcon />
-              Watch Video
-            </a>
-            <Link href="/about" className="flex items-center justify-center gap-3 bg-transparent border-2 border-[#111111] text-[#111111] px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-[#111111] hover:text-white transition">
-              About The Band
-            </Link>
-          </div>
+            <h1 className="font-display text-[4.5rem] sm:text-[7rem] md:text-[10rem] lg:text-[14rem] leading-[0.85] mb-6 tracking-tight text-white drop-shadow-md">
+              Hope <br/> Through <br/> Harmony.
+            </h1>
+            <p className="text-lg md:text-2xl font-normal text-white/85 max-w-2xl mx-auto mb-8 leading-relaxed">
+              Christian rock bringing authentic worship, bold musicianship, and the living hope of Jesus Christ.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row justify-center gap-4 w-full sm:w-auto mb-8">
+              <a href="#listen" className="flex items-center justify-center gap-3 bg-white text-black px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white/90 transition shadow-lg">
+                <PlayIcon />
+                Watch Video
+              </a>
+              <Link href="/about" className="flex items-center justify-center gap-3 bg-transparent border-2 border-white text-white px-10 py-5 font-bold uppercase tracking-widest text-sm hover:bg-white hover:text-black transition">
+                About The Band
+              </Link>
+            </div>
           </div>
 
         </motion.section>
