@@ -44,9 +44,14 @@ export default function Home() {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: "smooth" });
           }}
-          className="font-display text-3xl md:text-5xl text-white hover:opacity-75 transition cursor-pointer"
+          aria-label="The Fishermen Home"
+          className="hover:opacity-80 transition cursor-pointer flex items-center"
         >
-          The Fishermen.
+          <img 
+            src="/fishermen/images/logo.png" 
+            alt="The Fishermen" 
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </Link>
 
         <div className="flex items-center gap-4 md:gap-8">
@@ -213,8 +218,14 @@ export default function Home() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-[#111111] text-white py-12 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
-        <div className="font-display text-6xl mb-4">The Fishermen.</div>
+      <footer className="bg-[#111111] text-white py-14 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
+        <div className="mb-6 flex justify-center">
+          <img 
+            src="/fishermen/images/logo.png" 
+            alt="The Fishermen" 
+            className="h-14 md:h-18 w-auto object-contain"
+          />
+        </div>
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/60 mb-8">
           Casting Sounds and Captivating Souls for His Glory
         </p>

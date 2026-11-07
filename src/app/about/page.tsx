@@ -101,8 +101,12 @@ export default function AboutPage() {
         transition={{ duration: 0.35, ease: "easeInOut" }}
         className="sticky top-0 z-50 bg-[#0D0D0D]/90 backdrop-blur-md flex justify-between items-center px-6 md:px-8 py-4 md:py-6 w-full border-b border-white/10"
       >
-        <Link href="/" className="font-display text-3xl md:text-5xl tracking-tight text-white hover:opacity-75 transition">
-          The Fishermen.
+        <Link href="/" aria-label="The Fishermen Home" className="hover:opacity-80 transition cursor-pointer flex items-center">
+          <img 
+            src="/fishermen/images/logo.png" 
+            alt="The Fishermen" 
+            className="h-10 md:h-12 w-auto object-contain"
+          />
         </Link>
         <div className="flex items-center gap-4 md:gap-8">
           <div className="flex items-center gap-4 md:gap-8 font-bold text-xs uppercase tracking-[0.2em] text-white/80">
@@ -313,7 +317,13 @@ export default function AboutPage() {
 
       {/* Footer */}
       <footer className="bg-[#111111] text-white py-16 px-8 text-center flex flex-col items-center justify-center border-t border-white/10">
-        <div className="font-display text-6xl mb-4">The Fishermen.</div>
+        <div className="mb-6 flex justify-center">
+          <img 
+            src="/fishermen/images/logo.png" 
+            alt="The Fishermen" 
+            className="h-14 md:h-18 w-auto object-contain"
+          />
+        </div>
         <p className="text-xs font-bold uppercase tracking-[0.25em] text-white/60 mb-8">
           Casting Sounds and Captivating Souls for His Glory
         </p>
