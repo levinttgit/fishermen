@@ -62,14 +62,19 @@ export default function Home() {
           variants={fadeUp}
           className="relative px-8 py-20 md:py-32 flex flex-col items-center text-center max-w-none overflow-hidden bg-[#0D0D0D] text-white"
         >
-          {/* Background Image */}
-          <div className="absolute inset-0 z-0">
-            <img
-              src="/fishermen/images/studio.jpg"
-              alt="Recording Studio"
-              className="w-full h-full object-cover object-center opacity-30"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/90 via-[#0D0D0D]/40 to-[#0D0D0D]" />
+          {/* Background Video Reel */}
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              poster="/fishermen/images/studio.jpg"
+              className="w-full h-full object-cover object-center opacity-40 scale-105"
+            >
+              <source src="/fishermen/videos/hero-reel.mp4" type="video/mp4" />
+            </video>
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/85 via-[#0D0D0D]/40 to-[#0D0D0D]" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
