@@ -1,5 +1,6 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { socialLinks } from "../socialLinks";
@@ -68,6 +69,24 @@ const members: Member[] = [
 const bandPhotoUrl = "/fishermen/images/band.jpg";
 
 export default function AboutPage() {
+  const [navVisible, setNavVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        setNavVisible(false); // scrolling down -> hide
+      } else {
+        setNavVisible(true); // scrolling up or at top -> show
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   const fadeUp: Variants = {
     hidden: { opacity: 0, y: 25 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
@@ -75,8 +94,13 @@ export default function AboutPage() {
 
   return (
     <div className="min-h-screen bg-[#0D0D0D] text-white font-sans selection:bg-white selection:text-black">
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-[#0D0D0D]/90 backdrop-blur-md flex justify-between items-center px-6 md:px-8 py-4 md:py-6 w-full border-b border-white/10 transition-all">
+      {/* Sticky Top Navigation with Auto-Hide on Scroll */}
+      <motion.nav
+        initial={{ y: "0%" }}
+        animate={{ y: navVisible ? "0%" : "-100%" }}
+        transition={{ duration: 0.35, ease: "easeInOut" }}
+        className="sticky top-0 z-50 bg-[#0D0D0D]/90 backdrop-blur-md flex justify-between items-center px-6 md:px-8 py-4 md:py-6 w-full border-b border-white/10"
+      >
         <Link href="/" className="font-display text-3xl md:text-5xl tracking-tight text-white hover:opacity-75 transition">
           The Fishermen.
         </Link>
@@ -107,7 +131,7 @@ export default function AboutPage() {
             })}
           </div>
         </div>
-      </nav>
+      </motion.nav>
 
       <main className="w-full">
         {/* About Header & Full Band Section (Side-by-Side) */}
