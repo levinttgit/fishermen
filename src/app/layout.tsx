@@ -27,8 +27,15 @@ export const metadata: Metadata = {
     images: ["/fishermen/images/band.jpg"],
   },
   icons: {
-    icon: "/fishermen/favicon.ico",
-    apple: "/fishermen/apple-icon.png",
+    icon: [
+      { url: "/fishermen/favicon.ico?v=3" },
+      { url: "/fishermen/favicon-32x32.png?v=3", sizes: "32x32", type: "image/png" },
+      { url: "/fishermen/favicon-16x16.png?v=3", sizes: "16x16", type: "image/png" },
+      { url: "/fishermen/icon.png?v=3", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [
+      { url: "/fishermen/apple-icon.png?v=3", sizes: "180x180", type: "image/png" },
+    ],
   },
 };
 
@@ -40,8 +47,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="icon" href="/fishermen/favicon.ico" sizes="any" />
-        <link rel="apple-touch-icon" href="/fishermen/apple-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/fishermen/favicon-32x32.png?v=3" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/fishermen/favicon-16x16.png?v=3" />
+        <link rel="icon" href="/fishermen/favicon.ico?v=3" />
+        <link rel="apple-touch-icon" href="/fishermen/apple-icon.png?v=3" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
