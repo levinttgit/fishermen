@@ -26,6 +26,10 @@ export const metadata: Metadata = {
     description: "Christian rock bringing authentic worship, bold musicianship, and the living hope of Jesus Christ.",
     images: ["/fishermen/images/band.jpg"],
   },
+  icons: {
+    icon: "/fishermen/favicon.ico",
+    apple: "/fishermen/apple-icon.png",
+  },
 };
 
 export default function RootLayout({
@@ -36,6 +40,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="icon" href="/fishermen/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/fishermen/apple-icon.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
