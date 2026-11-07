@@ -70,11 +70,11 @@ export default function Home() {
               muted
               playsInline
               poster="/fishermen/images/studio.jpg"
-              className="w-full h-full object-cover object-center opacity-40 scale-105"
+              className="w-full h-full object-cover object-center opacity-60 scale-105"
             >
               <source src="/fishermen/videos/hero-reel.mp4" type="video/mp4" />
             </video>
-            <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/85 via-[#0D0D0D]/40 to-[#0D0D0D]" />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#0D0D0D]/80 via-[#0D0D0D]/35 to-[#0D0D0D]" />
           </div>
 
           <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-center">
